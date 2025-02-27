@@ -1,10 +1,9 @@
 
-
 import React from "react";
 
-export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
+export type CardProps = React.HTMLAttributes<HTMLDivElement>;
 
-export const Card: React.FC<CardProps> = ({ className, children, ...props }) => {
+export const Card: React.FC<CardProps> = ({ className = "", children, ...props }) => {
   return (
     <div className={`border p-4 rounded shadow ${className}`} {...props}>
       {children}
